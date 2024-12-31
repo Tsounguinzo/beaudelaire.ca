@@ -6,26 +6,25 @@ type MetadataProps = {
 };
 
 const defaultMetadata = {
-  title: "Beaudelaire - The One",
-  description: "Portfolio of Beaudelaire Tsoungui Nzodoumkouo",
+  title: "Ali - The One",
+  description: "Portfolio of Ali Abufutaim",
 };
 
 export const constructMetadata = ({
   title,
   description = defaultMetadata.description,
   canonical = "/",
-  ogImage = "beaudelaire.jpeg",
+  ogImage = "avatar.jpeg",
 }: MetadataProps) => {
   return {
     metadataBase: new URL("https://beaudelaire.ca/"),
-    title: title ? `${title} - Beaudelaire` : defaultMetadata.title,
+    title: title ? `${title}` : defaultMetadata.title,
     description,
     keywords: [
       "portfolio",
-      "beaudelaire",
-      "tsoungui",
-      "nzodoumkouo",
-      "beaudelaire tsoungui nzodoumkouo",
+      "Ali",
+      "Abufutaim",
+      "Ali Abufutaim",
     ],
     alternates: {
       canonical,

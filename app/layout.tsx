@@ -1,13 +1,12 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@nextui-org/link";
-import { MdHeartBroken } from "react-icons/md";
 import dynamic from "next/dynamic";
 
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import Navbar from "@/components/navbar";
+import {IoMdRocket} from "react-icons/io";
 
 export const metadata: Metadata = {
   title: {
@@ -48,15 +47,8 @@ export default function RootLayout({
               {children}
             </main>
             <footer className="w-full flex items-center justify-center py-5">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="/"
-                title="nextui.org homepage"
-              >
-                <span className="text-default-600">Beaudelaire</span>
-                <MdHeartBroken className="text-red-700" size={20} />
-              </Link>
+                <span className="text-default-600">Ali</span>
+                <IoMdRocket size={20} />
             </footer>
           </div>
         </Providers>
