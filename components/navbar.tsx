@@ -1,9 +1,7 @@
 "use client";
 
 import {
-  LuHome,
   LuFolderHeart,
-  LuLuggage,
   LuMessageCircle,
 } from "react-icons/lu";
 import {
@@ -20,6 +18,7 @@ import {
 } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
 import { useReducer } from "react";
+import {FaHome} from "react-icons/fa";
 
 const menuItems = ["Home", "Work", "Projects"];
 
@@ -65,10 +64,10 @@ export default function Navbar(props: NavbarProps) {
             <Image
               alt="Logo"
               className="h-10 w-10 rounded-full"
-              src="/beaudelaire.jpeg"
+              src="/avatar.jpeg"
             />
           </div>
-          <span className="ml-2 font-medium md:hidden">Beaudelaire</span>
+          <span className="ml-2 font-medium md:hidden">Ali</span>
         </NavbarBrand>
 
         {/* Items */}
@@ -78,18 +77,8 @@ export default function Navbar(props: NavbarProps) {
             href="/"
             size="md"
           >
-            <LuHome />
+            <FaHome />
             Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem className="hidden md:flex" isActive={pathname === "/work"}>
-          <Link
-            className="text-black flex gap-2 hover:text-foreground-900"
-            href="/work"
-            size="md"
-          >
-            <LuLuggage />
-            Work
           </Link>
         </NavbarItem>
         <NavbarItem
@@ -108,10 +97,10 @@ export default function Navbar(props: NavbarProps) {
         <NavbarItem className="ml-2 !flex">
           <Link
             className="text-black flex gap-2 hover:text-foreground-900 text-medium ml-3 bg-[#4D869C]/40 rounded-full px-3 py-3"
-            href="https://cal.com/beaudelaire.ca"
+            href="https://cal.com/abufutaim"
           >
             <LuMessageCircle size={20} />
-            Say Hi
+            Let's Talk
           </Link>
         </NavbarItem>
       </NavbarContent>
