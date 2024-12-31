@@ -100,7 +100,7 @@ export default function Navbar(props: NavbarProps) {
             href="https://cal.com/abufutaim"
           >
             <LuMessageCircle size={20} />
-            Let's Talk
+            Let&#39;s Talk
           </Link>
         </NavbarItem>
       </NavbarContent>
