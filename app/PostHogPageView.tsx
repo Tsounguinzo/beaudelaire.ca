@@ -3,8 +3,9 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { usePostHog } from "posthog-js/react";
+import dynamic from "next/dynamic";
 
-export default function PostHogPageView(): null {
+function PostHogPageViewComponent(): null {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const posthog = usePostHog();
@@ -25,3 +26,9 @@ export default function PostHogPageView(): null {
 
   return null;
 }
+
+const PostHogPageView = dynamic(() => Promise.resolve(PostHogPageViewComponent), {
+  ssr: false,
+});
+
+export default PostHogPageView;

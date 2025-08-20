@@ -2,9 +2,9 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { Link } from "@nextui-org/link";
 import { MdHeartBroken } from "react-icons/md";
-import dynamic from "next/dynamic";
 
 import { Providers } from "./providers";
+import PostHogPageView from "./PostHogPageView";
 
 import { siteConfig } from "@/config/site";
 import Navbar from "@/components/navbar";
@@ -26,10 +26,6 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
 };
-
-const PostHogPageView = dynamic(() => import("./PostHogPageView"), {
-  ssr: false,
-});
 
 export default function RootLayout({
   children,

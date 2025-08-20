@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  LuHome,
+  LuHouse,
   LuFolderHeart,
   LuLuggage,
   LuMessageCircle,
@@ -78,7 +78,7 @@ export default function Navbar(props: NavbarProps) {
             href="/"
             size="md"
           >
-            <LuHome />
+            <LuHouse />
             Home
           </Link>
         </NavbarItem>
